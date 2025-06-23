@@ -1,0 +1,7 @@
+/* Tailwind css file */
+@import "tailwindcss";
+
+/* Font style */
+body {
+  font-family: "Poppins", sans;
+}
