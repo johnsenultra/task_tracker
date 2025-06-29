@@ -11,7 +11,7 @@
     "format": "prettier --write"
   },
   "dependencies": {
-    "@fontsource/poppins": "^5.2.6",
+    "@fontsource-variable/montserrat": "^5.2.6",
     "@tailwindcss/vite": "^4.1.10",
     "prettier-plugin-tailwindcss": "^0.6.13",
     "react": "^19.1.0",
