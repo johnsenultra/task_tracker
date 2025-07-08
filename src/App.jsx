@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import LandingPage from "./pages/LandingPage.jsx"
-import Layout from "./pages/Layout.jsx"
+import Header from "./components/Header.jsx"
 import Signin from "./pages/auth/Signin.jsx"
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Header />}>
             <Route index element={<LandingPage />} />
             <Route path="signin" element={<Signin />} />
           </Route>
