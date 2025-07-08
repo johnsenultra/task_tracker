@@ -10,34 +10,52 @@ export default function Header() {
 
   return (
     <>
-      <header className="relative bg-[#96ACB7] text-[#D4E4BC]">
+      <header className="relative bg-[#96ACB7] text-[#D4E4BC] transition-all duration-300">
         {/* Header Section */}
-        <nav className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between px-4">
+        <nav className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between px-8">
           <div className="py-3 text-[2.2rem] font-semibold tracking-[3px]">
             <Link to="/">Taskly</Link>
           </div>
           <button
             onClick={toggleMenu}
             type="button"
-            className="z-50 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white hover:bg-[#85999F] focus:ring-2 focus:ring-[#D4E4BC] focus:outline-none md:hidden"
-            aria-controls="mobile-menu"
+            className="text-gray- top-0 z-50 inline-flex h-10 w-10 items-center justify-center rounded-lg text-gray-800 hover:bg-[#85999F] focus:ring-[#D4E4BC] focus:outline-none md:hidden"
+            // aria-controls="mobile-menu"
             aria-expanded={isMenuOpen}
+            aria-label="Toggle Menu"
           >
             <span className="sr-only">Open Main Menu</span>
-            <svg
-              viewBox="0 0 24 24"
-              className="h-8 w-8"
-              fill="none"
-              stroke="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="3"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
+            {isMenuOpen ? (
+              <svg
+                viewBox="0 0 24 24"
+                className="h-7 w-8"
+                fill="none"
+                stroke="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19,5 L5,19 M19,19 L5,5"
+                />
+              </svg>
+            ) : (
+              <svg
+                viewBox="0 0 24 24"
+                className="h-7 w-8"
+                fill="none"
+                stroke="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            )}
           </button>
           <div
             className={`w-full md:flex md:w-auto ${isMenuOpen ? "block" : "hidden"} absolute top-full right-0 left-0 w-full bg-[#96ACB7] md:static md:block md:w-auto`}
