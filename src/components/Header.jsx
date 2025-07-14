@@ -9,8 +9,8 @@ export default function Header() {
   }
 
   return (
-    <>
-      <header className="relative bg-[#96ACB7] text-[#D4E4BC] transition-all duration-300">
+    <main>
+      <header className="sticky top-0 bg-[#96ACB7] text-[#D4E4BC] transition-all duration-300">
         {/* Header Section */}
         <nav className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between px-8">
           <div className="py-3 text-[2.2rem] font-semibold tracking-[3px]">
@@ -19,10 +19,9 @@ export default function Header() {
           <button
             onClick={toggleMenu}
             type="button"
-            className="text-gray- top-0 z-50 inline-flex h-10 w-10 items-center justify-center rounded-lg text-gray-800 hover:bg-[#85999F] focus:ring-[#D4E4BC] focus:outline-none md:hidden"
-            // aria-controls="mobile-menu"
+            className="top-0 z-50 inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg text-gray-800 hover:bg-[#85999F] focus:ring-[#D4E4BC] focus:outline-none md:hidden"
+            aria-controls="mobile-menu"
             aria-expanded={isMenuOpen}
-            aria-label="Toggle Menu"
           >
             <span className="sr-only">Open Main Menu</span>
             {isMenuOpen ? (
@@ -58,7 +57,7 @@ export default function Header() {
             )}
           </button>
           <div
-            className={`w-full md:flex md:w-auto ${isMenuOpen ? "block" : "hidden"} absolute top-full right-0 left-0 w-full bg-[#96ACB7] md:static md:block md:w-auto`}
+            className={`w-full md:w-auto ${isMenuOpen ? "block" : "hidden"} absolute top-full right-0 left-0 w-full bg-[#96ACB7] md:static md:block md:w-auto`}
           >
             <div className="flex flex-col space-y-4 p-4 md:flex-row md:items-center md:space-y-0 md:space-x-8 md:p-0">
               <a href="#how-it-works" className="hover:text-[#D4E4BC]/80">
@@ -67,7 +66,7 @@ export default function Header() {
               <a href="#about" className="hover:text-[#D4E4BC]/80">
                 About
               </a>
-              <button className="rounded-[12px] bg-[#48233C] px-4 py-2 hover:bg-[#48233C]/90">
+              <button className="rounded-lg bg-[#48233C] px-4 py-2 hover:bg-[#48233C]/90">
                 <Link to="/signin">Login</Link>
               </button>
             </div>
@@ -77,6 +76,6 @@ export default function Header() {
       <main>
         <Outlet />
       </main>
-    </>
+    </main>
   )
 }
