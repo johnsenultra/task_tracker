@@ -10,7 +10,7 @@ export default function Header() {
 
   return (
     <main>
-      <header className="sticky top-0 bg-[#96ACB7] text-[#D4E4BC] transition-all duration-300">
+      <header className="sticky top-0 z-50 border bg-[#96ACB7] text-[#D4E4BC] transition-all duration-300">
         {/* Header Section */}
         <nav className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between px-8">
           <div className="py-3 text-[2.2rem] font-semibold tracking-[3px]">
