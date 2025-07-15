@@ -86,6 +86,39 @@ export default function Signin() {
                   className="mt-1 block w-full rounded-xl border border-gray-300 px-4 py-3 shadow-sm focus:border-black focus:ring-black focus:outline-none"
                 />
               </div>
+              <div className="flex items-center">
+                <input
+                  id="term"
+                  type="checkbox"
+                  className="h-4 w-4 rounded border-gray-300 text-black focus:ring-black"
+                  name="terms"
+                />
+                <label
+                  htmlFor="terms"
+                  className="ml-2 block text-sm text-gray-700"
+                >
+                  {" I agree to the "}
+                  <a
+                    href="#terms"
+                    className="font-medium text-black hover:text-gray-800"
+                  >
+                    Terms of Service
+                  </a>
+                  {" And "}
+                  <a
+                    href="#policy"
+                    className="font-medium text-black hover:text-gray-800"
+                  >
+                    Privacy Policy
+                  </a>
+                </label>
+              </div>
+              <button
+                type="submit"
+                className="w-full cursor-pointer rounded-xl border border-transparent bg-black px-4 py-3 font-medium text-white shadow-sm hover:bg-gray-800 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:opacity-50"
+              >
+                Create account
+              </button>
             </form>
           </div>
         </div>
