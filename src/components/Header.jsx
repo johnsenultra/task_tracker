@@ -66,8 +66,10 @@ export default function Header() {
               <a href="#about" className="hover:text-[#D4E4BC]/80">
                 About
               </a>
-              <button className="rounded-lg bg-[#48233C] px-4 py-2 hover:bg-[#48233C]/90">
-                <Link to="/signin">Login</Link>
+              <button className="rounded-lg bg-[#48233C] px-3 py-2 hover:bg-[#48233C]/90">
+                <Link to="/signup" className="font-medium">
+                  Get Started
+                </Link>
               </button>
             </div>
           </div>
