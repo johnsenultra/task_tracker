@@ -34,7 +34,7 @@ export default function LandingPage() {
               See How It Works
             </button>
             <button className="group relative cursor-pointer overflow-hidden rounded-xl border-1 border-[#96ACB7] bg-[#36558F] before:absolute before:inset-0 before:z-[-1] before:bg-[#36558F] before:transition-transform before:duration-300 before:ease-in-out after:absolute after:inset-0 after:z-[-2] after:bg-[#D4E4BC] hover:-translate-y-0.5 hover:bg-[#D4E4BC] hover:text-[#48233C] hover:shadow-lg hover:shadow-gray-600/30 hover:before:-translate-x-full">
-              <Link to="/signin" className="inline-flex px-6 py-2">
+              <Link to="/signup" className="inline-flex px-6 py-2">
                 Get Started
                 <svg
                   aria-hidden="true"
